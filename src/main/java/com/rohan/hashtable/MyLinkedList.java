@@ -39,7 +39,7 @@ public class MyLinkedList<k> {
 		}
 		return null;
 	}
-	
+
 	public boolean delete(k key) {
 		INode<k> temp = head;
 		INode<k> prev = head;

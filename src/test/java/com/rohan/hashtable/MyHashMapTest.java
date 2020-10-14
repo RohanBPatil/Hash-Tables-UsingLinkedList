@@ -22,5 +22,5 @@ class MyHashMapTest {
 		System.out.println(myHashMap);
 		assertEquals(2, (int) myHashMap.get("be"));
 	}
-	
+
 }

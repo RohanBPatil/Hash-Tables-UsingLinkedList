@@ -59,18 +59,22 @@ public class MyLinkedHashMap<k, v> {
 		return index;
 	}
 
-	@Override
-	public String toString() {
-		return "MyLinkedHashMap List{" + myBucketArray + "}";
-	}
-
+	/**
+	 * removes given key
+	 * 
+	 */
 	public boolean remove(k key) {
 		int index = getBucketIndex(key);
 		MyLinkedList<k> myLinkedList = myBucketArray.get(index);
 		if (myLinkedList == null)
 			return false;
-		
+
 		return myLinkedList.delete(key);
+	}
+
+	@Override
+	public String toString() {
+		return "MyLinkedHashMap List{" + myBucketArray + "}";
 	}
 
 }

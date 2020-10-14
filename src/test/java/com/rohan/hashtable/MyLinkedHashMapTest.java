@@ -24,7 +24,7 @@ class MyLinkedHashMapTest {
 		System.out.println(linkedHashMap);
 		assertEquals(3, (int) linkedHashMap.get("paranoid"));
 	}
-	
+
 	@Test
 	void whenEnteredAKey_shouldRemove_keyValuePair() {
 		String sentence = "Paranoids are not paranoid because they are paranoid "
