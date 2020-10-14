@@ -39,6 +39,27 @@ public class MyLinkedList<k> {
 		}
 		return null;
 	}
+	
+	public boolean delete(k key) {
+		INode<k> temp = head;
+		INode<k> prev = head;
+		if (head.getKey().equals(key)) {
+			head = head.getNext();
+		} else {
+			while (temp.getNext() != null) {
+				if (temp.getKey().equals(key))
+					break;
+				prev = temp;
+				temp = temp.getNext();
+			}
+			if (tail.getKey().equals(key)) {
+				tail = prev;
+				tail.setNext(null);
+			}
+			prev.setNext(temp.getNext());
+		}
+		return true;
+	}
 
 	@Override
 	public String toString() {

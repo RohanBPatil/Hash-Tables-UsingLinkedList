@@ -64,4 +64,13 @@ public class MyLinkedHashMap<k, v> {
 		return "MyLinkedHashMap List{" + myBucketArray + "}";
 	}
 
+	public boolean remove(k key) {
+		int index = getBucketIndex(key);
+		MyLinkedList<k> myLinkedList = myBucketArray.get(index);
+		if (myLinkedList == null)
+			return false;
+		
+		return myLinkedList.delete(key);
+	}
+
 }
